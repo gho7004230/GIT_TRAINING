@@ -1,0 +1,24 @@
+# 1. Install git to Windows or Linux
+
+# 2. Initialize account on machine:
+git config --global user.name "Glenn Howard"
+git config --global user.email "{email registered to git}"
+
+# 3. Check status:
+git status
+
+# 4. Create a new repository:
+git clone https://gitlab.glennsweb.com/glenn/test1.git
+cd test1
+touch README.md (add some text)
+git add README.md
+git commit -m "add README.md"
+git push -u origin master (look in gitlab and see your new repo and README.md)
+
+# 5. Push an exisiting folder into git:
+cd test1
+git init
+git remote add origin https://gitlab.glennsweb.com/glenn/test1.git
+git add .
+git commit -m "initial commit"
+git push -u origin master
