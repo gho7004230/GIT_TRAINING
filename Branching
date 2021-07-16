@@ -1,0 +1,42 @@
+# 1. Create a new branch in your project:
+git branch new_test_branch
+
+# 2. Switch to your new branch:
+git checkout new_test_branch
+
+# 3. Create a new file called git_cs.txt then look at status:
+touch gi_cs.txt
+git status
+(result:)
+------------------------------
+On branch new _test_branch
+Changes not staged for commit:
+        created:    git_cs.txt
+------------------------------
+
+# 4. Commit change:
+git commit -m "Added new txt file"
+
+# 5. Push branch to git server:
+git push --set upstream origin new_test_branch (look in gitlab and see new branch)
+
+# 6. Merge banch with master:
+git checkout master
+git branch --merged
+# or use:
+git merge new_test_branch
+
+# 7. Push the merger to gitlab server:
+git push origin master
+
+# 8. Delete local branch:
+git branch -d new_test_branch
+
+# 9. List all remaining branches:
+git branch -a
+
+# 10. delete the remote branch:
+git push origin --delete new_test_branch
+
+# 11. Verify:
+git branch -a (Look on gitlab server to see removal of branch)
